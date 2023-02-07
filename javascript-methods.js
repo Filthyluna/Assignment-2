@@ -107,7 +107,21 @@ console.log(sumWithInitial);
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
   // Place your code here.
+  for (let i = 0; i < this.length; i++){
+    let array_el = this[i]
+    if (searchElement === array_el)
+      return true;
+  }
+  return false
 };
+
+//Test
+const pets = ['cat', 'dog', 'bat'];
+console.log(pets.myIncludes('car'));
+//Should be false
+const pets2 = ['cat', 'dog', 'bat'];
+console.log(pets.includes('cat'));
+//Should be true
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
