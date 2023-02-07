@@ -87,7 +87,22 @@ console.log(array1.myEvery(isBelowThreshold));
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
   // Place your code here.
+  let num = 0;
+  for (let i = 0; i < this.length; i++){
+    callbackFn(num = num + this[i])
+  }
+  return num;
 };
+
+//Test
+const array2 = [1, 2, 3, 4];
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array2.myReduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue
+);
+console.log(sumWithInitial);
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
