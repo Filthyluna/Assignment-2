@@ -29,7 +29,7 @@ Array.prototype.myFilter = function(callbackFn) {
   let new_arr = []
   for (let i = 0; i < this.length; i++){
     if (callbackFn(this[i])) { //If it is true that this i value is fron cbfn...
-      new_arr.push(this[i]) //Push the item into the new array
+      new_arr.push(this[i]) //Push the item into the new arraysom
     }
     else {
       continue
