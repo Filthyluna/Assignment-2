@@ -136,7 +136,7 @@ Array.prototype.myIndexOf = function(searchElement, index) {
   }
 }
 else{
-  for(let i = index; i < this.length; i++){
+  for(let i = 0; i < this.length; i++){
     if(searchElement === this[i]){
       return i
     }
@@ -154,7 +154,26 @@ console.log(paragraph.indexOf(searchTerm, indexOfFirst + 1));
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
   // Place your code here.
+  if(index){
+  for(let i = index; i > 0; i--){
+    if(searchElement === this[i]){
+      return i
+    }
+  }
+}
+else{
+  for(let i = this.length; i > 0; i--){
+    if(searchElement === this[i]){
+      return i
+    }
+  }
+}
+ return -1 // Returns this if it is not found
 };
+//Test
+const paragraph2 = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+const searchTerm2 = 'dog';
+console.log(`The index of the first "${searchTerm}" from the end is ${paragraph.lastIndexOf(searchTerm)}`);
 
 // KEYS //
 Object.myKeys = function(object) {
