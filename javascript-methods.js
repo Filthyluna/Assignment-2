@@ -193,9 +193,16 @@ const object1 = {
   b: 42,
   c: false
 };
-console.log(Object.keys(object1));
+console.log(Object.myKeys(object1));
 
 // VALUES //
 Object.myValues = function(object) {
   // Place your code here.
+  let obj_arr = [] //Holds array of objects
+  for(let i in object){ //cycles through the object we create
+    obj_arr.push(object[i]) //Pushes only the objects into the new array
+  }
+  return obj_arr //Return new filled array
 };
+
+console.log(Object.myValues(object1));
