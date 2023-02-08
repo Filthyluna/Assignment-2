@@ -124,9 +124,32 @@ console.log(pets.includes('cat'));
 //Should be true
 
 // INDEXOF //
-Array.prototype.myIndexOf = function(searchElement) {
+Array.prototype.myIndexOf = function(searchElement, index) {
   // Place your code here.
+  //Added index to specify more than one piece of information in a string
+  //Helps handle the part where index of returns a substring index greater than or equal to a specified number
+  if(index){
+  for(let i = index; i < this.length; i++){
+    if(searchElement === this[i]){
+      return i
+    }
+  }
+}
+else{
+  for(let i = index; i < this.length; i++){
+    if(searchElement === this[i]){
+      return i
+    }
+  }
+}
+ return -1 // Returns this if it is not found
 };
+//Test
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+const searchTerm = 'dog';
+const indexOfFirst = paragraph.indexOf(searchTerm);
+console.log(indexOfFirst)
+console.log(paragraph.indexOf(searchTerm, indexOfFirst + 1));
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
