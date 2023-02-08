@@ -112,7 +112,7 @@ Array.prototype.myIncludes = function(searchElement) {
     if (searchElement === array_el)
       return true;
   }
-  return false
+  return false;
 };
 
 //Test
