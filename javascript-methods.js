@@ -146,11 +146,7 @@ else{
 };
 
 //Test
-const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
-const searchTerm = 'dog';
-const indexOfFirst = paragraph.indexOf(searchTerm);
-console.log(indexOfFirst)
-console.log(paragraph.indexOf(searchTerm, indexOfFirst + 1));
+
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
@@ -173,9 +169,7 @@ else{
 };
 
 //Test
-const paragraph2 = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
-const searchTerm2 = 'dog';
-console.log(`The index of the first "${searchTerm}" from the end is ${paragraph.lastIndexOf(searchTerm)}`);
+
 
 // KEYS //
 Object.myKeys = function(object) {
