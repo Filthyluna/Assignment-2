@@ -144,6 +144,7 @@ else{
 }
  return -1 // Returns this if it is not found
 };
+
 //Test
 const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
 const searchTerm = 'dog';
@@ -170,6 +171,7 @@ else{
 }
  return -1 // Returns this if it is not found
 };
+
 //Test
 const paragraph2 = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
 const searchTerm2 = 'dog';
@@ -178,7 +180,20 @@ console.log(`The index of the first "${searchTerm}" from the end is ${paragraph.
 // KEYS //
 Object.myKeys = function(object) {
   // Place your code here.
+  let key_arr = [] //Holds array of keys
+  for(let i in object){ //cycles through the object we create
+    key_arr.push(i) //Pushes only the keys into the new array
+  }
+  return key_arr //Return new array
 };
+
+//Test
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+console.log(Object.keys(object1));
 
 // VALUES //
 Object.myValues = function(object) {
