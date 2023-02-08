@@ -120,7 +120,7 @@ const pets = ['cat', 'dog', 'bat'];
 console.log(pets.myIncludes('car'));
 //Should be false
 const pets2 = ['cat', 'dog', 'bat'];
-console.log(pets.includes('cat'));
+console.log(pets.myIncludes('cat'));
 //Should be true
 
 // INDEXOF //
@@ -146,14 +146,17 @@ else{
 };
 
 //Test
-const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
-const searchTerm = 'dog';
-const indexOfFirst = paragraph.indexOf(searchTerm);
-console.log(indexOfFirst)
-console.log(paragraph.indexOf(searchTerm, indexOfFirst + 1));
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+console.log(beasts.myIndexOf('bison'));
+// Expected output: 1
+// Start from index 2
+console.log(beasts.myIndexOf('bison', 2));
+// Expected output: 4
+console.log(beasts.myIndexOf('giraffe'));
+// Expected output: -1
 
 // LASTINDEXOF //
-Array.prototype.myLastIndexOf = function(searchElement) {
+Array.prototype.myLastIndexOf = function(searchElement, index) {
   // Place your code here.
   if(index){
   for(let i = index; i > 0; i--){
@@ -173,9 +176,7 @@ else{
 };
 
 //Test
-const paragraph2 = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
-const searchTerm2 = 'dog';
-console.log(`The index of the first "${searchTerm}" from the end is ${paragraph.lastIndexOf(searchTerm)}`);
+console.log(beasts.myLastIndexOf('bison'));
 
 // KEYS //
 Object.myKeys = function(object) {
